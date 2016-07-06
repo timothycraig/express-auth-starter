@@ -21,3 +21,11 @@
 > mongod
 > npm run dev
 ```
+
+##### Config.js
+- Add config.js to the root directory
+```
+module.exports = {
+  secret: 'make up your key here'
+}
+```
