@@ -16,7 +16,7 @@
 
 ### Installation
 ```
-> git clone 
+> git clone https://github.com/timothycraig/express-auth-starter.git
 > npm install
 > mongod
 > npm run dev
