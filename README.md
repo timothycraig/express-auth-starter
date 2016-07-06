@@ -1,9 +1,7 @@
-### DB
-- MongoDB
-
-### Packages
+### Packages Used
 - bcrypt-nodejs
 - body-parser
+- cors
 - express
 - jwt-simple
 - mongoose
@@ -13,8 +11,13 @@
 - passport-jwt
 - passport-local
 
-### Setup
-1. Clone or Download Repo
-2. npm install
-3. mongod
-4. npm run dev
+### DB
+- MongoDB
+
+### Installation
+```
+> git clone 
+> npm install
+> mongod
+> npm run dev
+```
