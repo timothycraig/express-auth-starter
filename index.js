@@ -4,18 +4,19 @@ const http        = require('http')
 const bodyParser  = require('body-parser')
 const morgan      = require('morgan')
 const app         = express()
-const router      = require('./router')
 const mongoose    = require('mongoose')
 const cors        = require('cors')
+const keys        = require('./config/keys')
 
 // DB Setup
-mongoose.connect('mongodb://localhost:auth/auth')
+mongoose.connect(keys.mongoURI)
 
 // App setup
 app.use(morgan('combined'))
 app.use(cors())
 app.use(bodyParser.json({ type: '*/*' }))
-router(app)
+
+require('./routes/authRoutes')(app)
 
 // Server Setup
 const port = process.env.PORT || 3090
