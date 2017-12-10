@@ -3,10 +3,11 @@ const express     = require('express')
 const http        = require('http')
 const bodyParser  = require('body-parser')
 const morgan      = require('morgan')
-const app         = express()
 const mongoose    = require('mongoose')
 const cors        = require('cors')
 const keys        = require('./config/keys')
+
+const app         = express()
 
 // DB Setup
 mongoose.connect(keys.mongoURI)

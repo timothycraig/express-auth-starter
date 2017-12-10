@@ -1,4 +1,7 @@
-### Packages Used
+
+# Express Auth API
+JWT based authentication strategy with MongoDB
+
 - bcrypt-nodejs
 - body-parser
 - cors
@@ -15,17 +18,19 @@
 - MongoDB
 
 ### Installation
-```
-> git clone https://github.com/timothycraig/express-auth-starter.git
-> npm install
-> mongod
-> npm run dev
+
+```bash
+$ yarn install
+$ mongod
+$ yarn run dev
 ```
 
-##### Config.js
-- Add config.js to the root directory
-```
+### Config
+
+__/config/dev.js__
+```js
 module.exports = {
-  secret: 'make up your key here'
+  jwtSecret: 'make up your own secret',
+  mongoURI: 'mongodb://localhost:auth/auth'
 }
 ```
