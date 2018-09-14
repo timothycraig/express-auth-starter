@@ -1,7 +1,7 @@
 
-const jwt     = require('jwt-simple')
-const User    = require('../models/user')
-const keys    = require('../config/keys')
+const jwt = require('jwt-simple')
+const User = require('../models/user')
+const keys = require('../config/keys')
 
 function tokenForUser (user) {
   const timestamp = new Date().getTime()
@@ -16,11 +16,10 @@ exports.signin = (req, res, next) => {
 }
 
 exports.signup = (req, res, next) => {
-  const email = req.body.email
-  const password = req.body.password
+  const { email, password } = req.body
 
   if (!email || !password) {
-    return res.status(422).send({ error: 'Please provide email and password.'})
+    return res.status(422).send({ error: 'Please provide email and password.' })
   }
 
   // See if a user with the given email exists

@@ -3,10 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "engines": {
-    "node": "v9.2.0",
-    "npm": "5.5.1"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js",
@@ -16,15 +12,19 @@
   "license": "ISC",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
-    "body-parser": "^1.15.2",
+    "body-parser": "^1.18.3",
     "cors": "^2.7.1",
-    "express": "^4.14.0",
+    "express": "^4.16.3",
     "jwt-simple": "^0.5.0",
     "mongoose": "^4.5.2",
-    "morgan": "^1.7.0",
-    "nodemon": "^1.9.2",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.18.4",
     "passport": "^0.3.2",
     "passport-jwt": "^2.1.0",
     "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.5.0",
+    "standard": "^12.0.1"
   }
 }

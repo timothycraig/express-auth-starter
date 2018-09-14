@@ -1,7 +1,7 @@
 
-const mongoose  = require('mongoose')
-const Schema    = mongoose.Schema
-const bcrypt    = require('bcrypt-nodejs')
+const mongoose = require('mongoose')
+const { Schema } = mongoose
+const bcrypt = require('bcrypt-nodejs')
 
 // Define our model
 const userSchema = new Schema({
@@ -15,7 +15,7 @@ const userSchema = new Schema({
 
 // On Save Hook, encrypt password
 // Before saving a model, run this function
-userSchema.pre('save', function(next) {
+userSchema.pre('save', function (next) {
   // get access to the user model
   const user = this
 
@@ -34,7 +34,7 @@ userSchema.pre('save', function(next) {
   })
 })
 
-userSchema.methods.comparePassword = function(candidatePassword, callback) {
+userSchema.methods.comparePassword = function (candidatePassword, callback) {
   bcrypt.compare(candidatePassword, this.password, (err, isMatch) => {
     if (err) { return callback(err) }
 
