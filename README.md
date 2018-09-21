@@ -2,27 +2,12 @@
 # Express Auth API
 JWT based authentication strategy with MongoDB
 
-- bcrypt-nodejs
-- body-parser
-- cors
-- express
-- jwt-simple
-- mongoose
-- morgan
-- nodemon
-- passport
-- passport-jwt
-- passport-local
-
-### DB
-- MongoDB
-
 ### Installation
 
 ```bash
-$ yarn install
+$ npm install
 $ mongod
-$ yarn run dev
+$ npm run dev
 ```
 
 ### Config
